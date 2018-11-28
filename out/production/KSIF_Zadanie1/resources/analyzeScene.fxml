@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AnalyzeWindowController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <SplitPane dividerPositions="0.3944281524926686" layoutX="14.0" layoutY="14.0" orientation="VERTICAL" prefHeight="684.0" prefWidth="986.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="7.0" layoutY="4.0" text="Zašifrovaný text" textFill="#7c7c7c">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="40.0" text="IC:" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="69.0" text="Jazyk:" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="encIcLabel" layoutX="51.0" layoutY="40.0" text="0" textFill="#6b6b6b">
+
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="encLanguageLabel" layoutX="74.0" layoutY="69.0" text="-" textFill="#6b6b6b">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <BarChart fx:id="encrTextBarChart" layoutX="220.0" layoutY="25.0" prefHeight="365.0" prefWidth="731.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <Label layoutX="508.0" layoutY="506.0" text="Frekvencie jednotlivých znakov" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="993.0">
+                     <children>
+                        <Label layoutX="9.0" layoutY="6.0" text="Otvorený text" textFill="#7c7c7c">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="openLanguageLabel" layoutX="75.0" layoutY="76.0" text="-" textFill="#6b6b6b">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="openIcLabel" layoutX="52.0" layoutY="47.0" text="0" textFill="#6b6b6b">
+                           <font>
+                              <Font name="Calibri Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="13.0" layoutY="76.0" text="Jazyk:" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="47.0" text="IC:" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <BarChart fx:id="openTextBarChart" layoutX="220.0" layoutY="47.0" prefHeight="365.0" prefWidth="731.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </BarChart>
+                        <Label layoutX="490.0" layoutY="473.0" text="Frekvencie jednotlivých znakov" textFill="#0e4061" underline="true">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
